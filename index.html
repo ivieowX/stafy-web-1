@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STAFY</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/stafy-logo.png" rel="icon">
+    <link rel="icon" href="img/stafy-logo.png">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,307 +27,111 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        div.apexcharts-canvas *,
+        .apexcharts-text tspan {
+            font-family: 'Kanit' !important;
+        }
+
+        div.letter p {
+            margin: 0 !important;
+        }
+    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-    <div class="container-fluid bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner"
-            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
 
-        <!-- Navbar & Hero Start -->
+    <!-- Header -->
+    <header id="header" class="fixed-top ">
         <div class="container-fluid p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 py-lg-3 py-3 py-lg-0">
+                <a href="#" class="navbar-brand p-0">
                     <h1 class="m-1">STAFY</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="collapse navbar-collapse " id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#feature" class="nav-item nav-link">Feature</a>
-                        <a href="#pricing" class="nav-item nav-link">Pricing</a>
-                        <a href="#review" class="nav-item nav-link">Review</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                        <!-- Language Dropdown -->
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="languageDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Language
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="languageDropdown" style="margin-top: -30px;">
-                                <li><a class="dropdown-item" href="#">English</a></li>
-                                <li><a class="dropdown-item" href="#">Thai</a></li>
-                            </ul>
-                        </div>
-
-
                     </div>
-                    <a href="#contact"
-                        class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Start Free Trial</a>
+                    <a href="#"
+                        class="btn btn-primary-gradient align-items-center justify-content-center py-2 px-4 ms-3 rounded-pill me-3 "
+                        style="font-size: 1.5rem; color: rgb(255, 255, 255);">
+                        Sign in
+                    </a>
+                    <a href="http://app.stafy.co.th/"
+                        class="btn btn-primary-gradient align-items-center justify-content-center py-2 px-4 ms-3 rounded-pill me-3 "
+                        style="font-size: 1.5rem; color: rgb(255, 255, 255);">
+                        Get Started
+                    </a>
                 </div>
-            </nav>
-
-            <div class="container-fluid mx-0 pb-0 bg-primary hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5">
-                        <div class="col-lg-8 text-center text-lg-start" style="margin-top: -20px;">
-                            <p class="text-white mb-4 animated slideInDown" style="font-size: 3.5rem; font-weight: bold;">
-                                เปลี่ยนเรื่องยุ่งๆให้กลายเป็นเรื่องง่ายสำหรับ HR ของคุณ</p>
-                            <p class="text-white pb-3 animated slideInDown" style="font-size: 2rem; margin-bottom: 50px;">ทางออกสำหรับ HRM Solution ราคาเริ่มต้น 50 บาท</p>
-                            <a href="#contact"
-                                class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft"
-                                style="font-size: 1.5rem; color: rgb(255, 255, 255); font-weight: bold;">Start free Trial </a>
-                        </div>
-                        <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
-                            data-wow-delay="0.3s" style="margin-top: -60px;">
-                            <div class="owl-carousel screenshot-carousel">
-                                <img class="img-fluid" src="img/screenshot-1.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-2.png" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+            </nav><!-- .navbar -->
         </div>
-        <!-- Navbar & Hero End -->
+    </header><!-- End Header -->
 
+    <!-- Main Content -->
+    <!-- ======= Hero Section ======= -->
+    <section class="d-flex align-items-center p-0" id="home">
+        <div class="container-fluid bg-white p-0">
+            <div class="container-fluid p-0">
+                <div class="container-fluid mx-0 pb-0 bg-primary hero-header">
+                    <div class="container ">
+                        <div class="row g-5 align-items-center">
+                            <!-- Left Content -->
+                            <div class=" text-center text-white ">
+                                <p class="text-white animated slideInDown "
+                                    style="font-size: 3.5rem; font-weight: bold;">
+                                    Bring your entire business together in one platformEasy
+                                </p>
+                                <p class="text-white animated slideInDown"
+                                    style="font-size: 2rem; margin-bottom: 50px;">
+                                    to use and efficient at a reasonable price!
+                                </p>
+                            </div>
 
-        <!-- About Start -->
-        <div class="container-fluid py-2" id="about">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">เกี่ยวกับ
-                        </p>
-                        <p class="mb-4" style="font-size: 1.5rem;">#1 APP STAFY THE BEST HRM</p>
-                        <p class="mb-4">เครื่องมือที่ช่วยองค์กรในการบริหารและจัดการพนักงานอย่างเป็นระบบ 
-                            ตั้งแต่การสรรหาบุคลากร การบันทึกเวลา การดึงรายงาน ทำเงินเดือนอย่างแม่นยำ 
-                             ช่วยให้ฝ่าย HR พัฒนาบุคลากรและสร้างสรรค์ประสิทธิภาพให้กับองค์กร</p>
-                        <div class="row g-4 mb-4">
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="d-flex">
-                                    <i class="fa fa-building fa-2x text-primary-gradient flex-shrink-0 mt-1"></i>
-                                    <div class="ms-3">
-                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
-                                        <p class="text-primary-gradient mb-0">จำนวนองค์กร</p>
-                                    </div>
+                            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white" style="font-size: 3rem; font-weight: bold;">Our
+                                    Products</p>
+                            </div>
+                            <div class="row justify-content-center mt-4 g-4">
+                                <!-- HR -->
+                                <div class="col-md-3">
+                                    <a href="stafy-hr.html" target="_blank"
+                                        class="btn btn-primary-gradient btn-hover d-flex flex-column align-items-center justify-content-center p-4 rounded-lg w-100"
+                                        style="min-height: 150px;">
+                                        <img src="https://img.icons8.com/color/96/user.png" alt="HR Icon" class="mb-2"
+                                            style="width: 60px; height: 60px;" />
+                                        <span class="text-white text-center"
+                                            style="font-size: 1.2rem; font-weight: bold;">HR</span>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                                <div class="d-flex">
-                                    <i class="fa fa-users fa-2x text-secondary-gradient flex-shrink-0 mt-1"></i>
-                                    <div class="ms-3">
-                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
-                                        <p class="text-secondary-gradient mb-0">จำนวนผู้ใช้</p>
-                                    </div>
+                                <!-- Finance -->
+                                <div class="col-md-3">
+                                    <a href="stafy-finance.html" target="_blank"
+                                        class="btn btn-primary-gradient btn-hover d-flex flex-column align-items-center justify-content-center p-4 rounded-lg w-100"
+                                        style="min-height: 150px;">
+                                        <img src="https://img.icons8.com/color/96/money.png" alt="Finance Icon"
+                                            class="mb-2" style="width: 60px; height: 60px;" />
+                                        <span class="text-white text-center"
+                                            style="font-size: 1.2rem; font-weight: bold;">Finance</span>
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                        <a href="#contact" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"
-                            style="font-size: 1.5rem; color: rgb(255, 255, 255); font-weight: bold;">Read
-                            More</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- Features Start -->
-        <div class="container-xxl py-5" id="feature">
-            <div class="container py-5 px-lg-5 ">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">ฟีเจอร์</p>
-                </div>
-                <div class="row g-4 ">
-                    <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-money-bill-wave text-white fs-4"></i>
-                            </div>
-                            <p class="mb-3 " style="color: black; font-size: 1.5rem;">เงินเดือน</p>
-                            <p class="m-0">สลิปเงินเดือน เคลมค่าใช้จ่าย</p>
-                            <p class="m-0">สวัสดีการ,โอที,เบี้ยเลี้ยง</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-user-check text-white fs-4"></i>
-                            </div>
-                            <p class="mb-3 " style="color: black; font-size: 1.5rem;">ระบบการเข้างาน</p>
-                            <p class="m-0">บันทึกเวลาการทำงาน</p>
-                            <p class="m-0">เช็คอินการทำงานนอกสถานที่</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-calendar-alt text-white fs-4"></i>
-                            </div>
-                            <p class="mb-3 " style="color: black; font-size: 1.5rem;">ระบบลางานออนไลน์</p>
-                            <p class="m-0">ระบบลางานล่วงหน้า</p>
-                            <p class="m-0">ตรวจสอบสิทธิ์ในการลา</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-table text-white fs-4"></i>
-                            </div>
-                            <p class="mb-3 " style="color: black; font-size: 1.5rem;">ระบบตารางงาน</p>
-                            <p class="m-0">มอบหมายตารางงาน</p>
-                            <p class="m-0">ตรวจสอบตารางงาน</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-smile text-white fs-4"></i>
-                            </div>
-                            <p class="mb-3 " style="color: black; font-size: 1.5rem;">แสกนใบหน้า</p>
-                            <p class="m-0">รองรับการเข้างานแบบแสกนหน้าด้วย AI</p>
-                            <p class="m-0">ระบุตำแหน่ง GPS</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
-                                style="width: 60px; height: 60px;">
-                                <i class="fa fa-shield-alt text-white fs-4"></i>
-                            </div>
-                            <p class="mb-3 " style="color: black; font-size: 1.5rem;">ความปลอดภัยสูง</p>
-                            <p class="m-0">กำหนดสิทธิ์การเข้าถึงจากองค์กรจริง</p>
-                            <p class="m-0">ข้อมูลอยู่บนเซิร์ฟเวอร์ที่ความปลอดภัย</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Features End -->
-
-        <!-- Screenshot Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                        <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">
-                            เงินเดือน</p>
-                        <p class="mb-4" style="font-size: 1.3rem; font-weight: bold;">หากธุรกิจของคุณต้องการคุณสมบัติและความยืดหยุ่นที่หลากหลายในการจ่ายเงินเดือน พวกเราช่วยคุณได้</p>
-                        <p class="mb-4">ระบบบริหารทรัพยากรบุคคลพร้อมการจัดการ payroll แบบอัตโนมัติ ช่วยลดเวลาการ
-                            ทำงานของ HR ด้านต่าง ๆ ด้วยการบันทึกเวลาเข้าออกงานอย่างแม่นยำ
-                            พนักงานสามารถทำเรื่องลาผ่านระบบพร้อมการกำหนดและปรับตั้งค่าต่าง ๆ 
-                            ได้อย่างยืดหยุ่นทำให้การคำนวณเงินเดือนก็ทำได้ครบจบบน STAFY ใช้งานง่าย
-                            ไม่เสียเวลาเรียนรู้พร้อมออกข้อมูลรายงานได้หลากหลายรูปแบบ</p>
-                        <p><i class="fa fa-check text-primary-gradient me-3"></i> ไม่ต้องมีทีมงานไอทีดูแลไม่ต้องลงทุนเซิร์ฟเวอร์</p>
-                        <p><i class="fa fa-check text-primary-gradient me-3"></i> รองรับการเข้างานแบบสแกนหน้าด้วย AI และ GPS</p>
-                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i> เข้าระบบได้ทุกที่ทุกเวลา</p>
-                        <a href="#contact" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a>
-                    </div>
-                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
-                        data-wow-delay="0.3s">
-                        <div class="owl-carousel screenshot-carousel">
-                            <img class="img-fluid" src="img/screenshot-1.png" alt="">
-                            <img class="img-fluid" src="img/screenshot-2.png" alt="">
-                            <!-- <img class="img-fluid" src="img/screenshot-3.png" alt="">
-                            <img class="img-fluid" src="img/screenshot-4.png" alt="">
-                            <img class="img-fluid" src="img/screenshot-5.png" alt=""> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Screenshot End -->
-
-
-        <!-- Process Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-
-                    <p class="text-primary-gradient pb-3" style="font-size: 3rem; font-weight: bold;">
-                        เหมาะสำหรับใคร</p>
-                </div>
-                <div class="row gy-5 gx-4 justify-content-center">
-                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
-                                style="width: 100px; height: 100px;">
-                                <i class="fa fa-laptop fa-3x text-white"></i>
-                            </div>
-                            <h5 class="mt-4 mb-3"> Multi Platform</h5>
-                            <p class="mb-0"> รองรับการตั้งค่าเวลาเข้า-ออกงาน
-                                ทั้งแบบกะออฟฟิศ หรือ flexible hour</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
-                                style="width: 100px; height: 100px;">
-                                <i class="fa fa-building fa-3x text-white"></i>
-                            </div>
-                            <h5 class="mt-4 mb-3">Multi Company</h5>
-                            <p class="mb-0"> จัดการข้อมูลพร้อมกันได้หลายบริษัท
-                                บนระบบเดียวเหมาะกับทุกขนาดธุรกิจ</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
-                                style="width: 100px; height: 100px;">
-                                <i class="fa fa-users fa-3x text-white"></i>
-                            </div>
-                            <h5 class="mt-4 mb-3"> Multi Generation</h5>
-                            <p class="mb-0"> ออกแบบการใช้งานเพื่อคนทุกเจนให้พนักงานทำเรื่องในระบบด้วยตัวเอง
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Process Start -->
-        <!-- Download Start -->
-        <div class="container-xxl py-5">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6">
-                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/about.png">
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">Download</p>
-                        <p class="mb-4" style="font-size: 3rem; font-weight: bold; color: black;">Download The Latest
-                            Version Of Our App</p>
-                        <p class="mb-4"></p>
-                        <div class="row g-4 align-items-center">
-                            <div class="col-sm-8  wow fadeIn" data-wow-delay="0.5s">
-                                <a href=""
-                                    class="d-flex align-items-center justify-content-center bg-primary-gradient rounded py-2 px-6">
-                                    <i class="fab fa-apple fa-3x px-2 text-white flex-shrink-0"></i>
-                                    <i class="fab fa-android fa-3x px-4 text-white flex-shrink-0"></i>
-                                    <div class="ms-6">
-                                        <p class="text-white mb-2">รองรับทั้งระบบ</p>
-                                        <p class="text-white mb-2">IOS & Android</p>
-                                    </div>
-                                </a>
+                                <!-- ForexERP -->
+                                <div class="col-md-3">
+                                    <a href="http://mgt2.pnu.ac.th/jakpong/forex-erp/" target="_blank"
+                                        class="btn btn-primary-gradient btn-hover d-flex flex-column align-items-center justify-content-center p-4 rounded-lg w-100"
+                                        style="min-height: 150px;">
+                                        <img src="https://img.icons8.com/color/96/currency-exchange.png"
+                                            alt="ForexERP Icon" class="mb-2" style="width: 60px; height: 60px;" />
+                                        <span class="text-white text-center"
+                                            style="font-size: 1.2rem; font-weight: bold;">ForexERP</span>
+                                    </a>
+                                </div>
                             </div>
 
                         </div>
@@ -337,484 +139,136 @@
                 </div>
             </div>
         </div>
-        <!-- Download End -->
-        <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-            <p class="text-primary-gradient pb-3" style="font-size: 3rem; font-weight: bold;">
-                วีดีโอ
-            </p>
-        </div>
-        <div class="container-md">
-            <div class="row align-items-start justify-content-center" >
-                <!-- Video Item -->
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/QidCFRRFF4w?si=0n5Ban1wjvVx856K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section><!-- End Hero -->
+    <section id="form" class="d-flex align-items-center justify-content-center py-5">
+            <div class="container d-flex justify-content-center">
+                <div class="form-container">
+                    <div class="text-center mb-3">
+                        <h3 class="text-primary-gradient">
+                            If you're interested, please fill out the form for a trial.
+                        </h3>
                     </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/4wkaDMK-3ec?si=GdhI_rG5CnuMn67E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/6ElHZ5A-plA?si=QTkf5BS8WhVTW82M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/gk955Fnlv0M?si=pz5jgWJFSqEn2_pD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/wROte4r9djc?si=3Qa-eDHAZTPL4g-i" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/vZBWV4Ju9Ro?si=g2xXx8ySfTJEo4Mo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/wLgkwdXsSDs?si=eCqkmJldWtjy-R82" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/zsgHP1o5ZHo?si=Sd1k22P5cssRpT_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/_sd4Wnpumag?si=Ik8DLg7pQ8tGxgc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class=" p-2" style="max-width: 30%; max-height: 1000px;">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/KHpja3UnTQA?si=efnc-WkT7Fp3_y5F" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSeEfDfj3OWk1J1rrQ6B6yR3HD_nTXiBme9CBNu98Kii2P_fGA/viewform?embedded=true"
+                        class="w-100 rounded" style="height: 800px; border: none;">
+                    </iframe>
                 </div>
             </div>
-        </div>
-        
-        
-        
-        
-        <!-- Pricing Start -->
-        <div class="container-fluid py-5" id="pricing">
-            <div class="container py-5 px-lg-5">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="text-primary-gradient" style="font-size: 3rem; font-weight: bold;">Pricing Plan</p>
-                    <h1 class="mb-5">Choose Your Plan</h1>
-                </div>
-                <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
-                    <ul
-                        class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
-                        <li class="nav-item">
-                            <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">Monthly</button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="pill" href="#tab-2">Yearly</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content text-start">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-lg-4">
-                                    <div class="bg-light rounded">
-                                        <div class="border-bottom p-4 mb-4">
-                                            <p class="text-primary-gradient mb-1"
-                                                style="font-size: 2rem; font-weight: bold;">ราคาพิเศษเพียง</p>
-                                        </div>
-                                        <div class="p-4 pt-0">
-                                            <h1 class="mb-3">
-                                                <small class="align-top"
-                                                    style="font-size: 22px; line-height: 45px;">฿</small>50 <small
-                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                                    ต่อคน</small>
-                                            </h1>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <p style="color: black;font-size: 1.5rem;">ต่อผู้ใช้งาน 1 คน</p>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <p style="color: black;font-size: 1.5rem;">พิเศษ !!! วันนี้สร้างรหัสเชิญ
-                                                    STAFY-TH เพื่อ
-                                                    ลงทะเบียนและฟรีผู้ใช้งาน 5 คนทันที</p
-                                                    class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
-                                                Started</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="col-lg-4">
-                                    <div class="bg-light rounded border">
-                                        <div class="border-bottom p-4 mb-4">
-                                            <h4 class="text-primary-gradient mb-1">Advance Plan</h4>
-                                            <span>Powerful & Awesome Features</span>
-                                        </div>
-                                        <div class="p-4 pt-0">
-                                            <h1 class="mb-3">
-                                                <small class="align-top"
-                                                    style="font-size: 22px; line-height: 45px;">$</small>24.99<small
-                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                                    Month</small>
-                                            </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive
-                                                    Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser
-                                                    Support</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <a href=""
-                                                class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4">Get
-                                                Started</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="bg-light rounded">
-                                        <div class="border-bottom p-4 mb-4">
-                                            <h4 class="text-primary-gradient mb-1">Premium Plan</h4>
-                                            <span>Powerful & Awesome Features</span>
-                                        </div>
-                                        <div class="p-4 pt-0">
-                                            <h1 class="mb-3">
-                                                <small class="align-top"
-                                                    style="font-size: 22px; line-height: 45px;">$</small>34.99<small
-                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                                    Month</small>
-                                            </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive
-                                                    Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser
-                                                    Support</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
-                                                Started</a>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade p-0">
-                            <div class="row g-4">
-                                <div class="col-lg-4">
-                                    <div class="bg-light rounded">
-                                        <div class="border-bottom p-4 mb-4">
-                                            <h4 class="text-primary-gradient mb-1">Starter Plan</h4>
-                                            <span>15 คน</span>
-                                        </div>
-                                        <div class="p-4 pt-0">
-                                            <h1 class="mb-3">
-                                                <small class="align-top"
-                                                    style="font-size: 22px; line-height: 45px;">฿</small>9,000<small
-                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                                    Yearly</small>
-                                            </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive
-                                                    Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser
-                                                    Support</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
-                                                Started</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="bg-light rounded border">
-                                        <div class="border-bottom p-4 mb-4">
-                                            <h4 class="text-primary-gradient mb-1">Advance Plan</h4>
-                                            <span>20 คน</span>
-                                        </div>
-                                        <div class="p-4 pt-0">
-                                            <h1 class="mb-3">
-                                                <small class="align-top"
-                                                    style="font-size: 22px; line-height: 45px;">฿</small>12,000<small
-                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                                    Yearly</small>
-                                            </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive
-                                                    Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser
-                                                    Support</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
-                                                Started</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="bg-light rounded">
-                                        <div class="border-bottom p-4 mb-4">
-                                            <h4 class="text-primary-gradient mb-1">Premium Plan</h4>
-                                            <span>100 คน</span>
-                                        </div>
-                                        <div class="p-4 pt-0">
-                                            <h1 class="mb-3">
-                                                <small class="align-top"
-                                                    style="font-size: 22px; line-height: 45px;">฿</small>60,000<small
-                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                                    Yearly</small>
-                                            </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i
-                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive
-                                                    Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser
-                                                    Support</span><i class="fa fa-check text-primary-gradient pt-1"></i>
-                                            </div>
-                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
-                                                Started</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Pricing End -->
-
-        <!-- Testimonial Start -->
-        <div class="container-fluid py-5" id="review">
-            <div class="container py-5 px-lg-5">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="text-primary-gradient fw-medium">Review</h5>
-                    <p class="mb-5" style="font-size: 3rem; font-weight: bold; color: black;">รีวิวจากผู้ใช้งานจริง</p>
-                </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-item rounded p-4">
-                        <div class="d-flex align-items-center mb-4">
-                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-1.png"
-                                style="width: 85px; height: 85px;">
-                            <div class="ms-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <p class="mb-1">Profession</p>
-                                <div>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mb-0">รู้เวลาการทำงานของพนักงาน</p>
-                    </div>
-                    <div class="testimonial-item rounded p-4">
-                        <div class="d-flex align-items-center mb-4">
-                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-2.jpg"
-                                style="width: 85px; height: 85px;">
-                            <div class="ms-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <p class="mb-1">Profession</p>
-                                <div>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mb-0">หลังจากมาใช้ STAFY ทำให้สะดวกและง่ายขึ้น</p>
-                    </div>
-                    <div class="testimonial-item rounded p-4">
-                        <div class="d-flex align-items-center mb-4">
-                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-3.jpg"
-                                style="width: 85px; height: 85px;">
-                            <div class="ms-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <p class="mb-1">Profession</p>
-                                <div>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mb-0">พอใช้ STAFY ทำให้ลดเวลาการทำงานได้เยอะ</p>
-                    </div>
-                    <div class="testimonial-item rounded p-4">
-                        <div class="d-flex align-items-center mb-4">
-                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-4.jpg"
-                                style="width: 85px; height: 85px;">
-                            <div class="ms-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <p class="mb-1">Profession</p>
-                                <div>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                    <small class="fa fa-star text-warning"></small>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mb-0">ใช้งานสะดวกมาก ดูเวลาการทำงานชัดเจน</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-
-
-        <!-- Contact Start -->
-        <div class="container-fluid py-5" id="contact">
-            <div class="container py-5 px-lg-5">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="text-primary-gradient fw-medium">ติดต่อ</h1>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-9">
-                        <div class="wow fadeInUp" data-wow-delay="0.3s">
-                            <h6 class="text-center mb-4">บริษัท สตาฟี จำกัด</a>.</p>
-                                <!-- <p class="text-center mb-4">ส่งข้อความเพื่อติดต่อทางบริ<a href="https://htmlcodex.com/contact-form">Download
-                                        Now</a>.</p> -->
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="name"
-                                                    placeholder="Your Name">
-                                                <label for="name">Your Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="email"
-                                                    placeholder="Your Email">
-                                                <label for="email">Your Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="subject"
-                                                    placeholder="Subject">
-                                                <label for="subject">Subject</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control" placeholder="Leave a message here"
-                                                    id="message" style="height: 150px"></textarea>
-                                                <label for="message">Message</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 text-center">
-                                            <button class="btn btn-primary-gradient rounded-pill py-3 px-5"
-                                                type="submit">Send Message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
+        </section>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid bg-primary text-light footer wow fadeIn " data-wow-delay="0.1s">
+            <div class="container-fluid py-0 px-lg-3">
+                <div class="row g-3 justify-content-center">
                     <div class="col-md-6 col-lg-3">
                         <h4 class="text-white mb-4">Address</h4>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>7 ถนน ผังเมือง 2 Sateng,เมือง,yala 95000</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>064 879 3848 , 089 978 5890</p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>7 Phangmuang 2 Road, Sateng, Mueang, Yala 95000</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>089 978 5890</p>
                         <p><i class="fa fa-envelope me-3"></i>sales@stafy.co.th</p>
+
+                        <h4 class="text-white">Our Social Networks</h4>
                         <div class="d-flex pt-2">
-                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
-                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/stafyth"
-                                target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/stafy.th/"
-                                target="_blank"><i class="fab fa-instagram"></i></a>
-                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a> -->
+                            <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/stafyth"
+                                target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="http://bit.ly/3KuBvr5">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/stafy.th/"
+                                target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="http://bit.ly/3KpCMzv">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-tiktok" viewBox="0 0 16 16">
+                                    <path
+                                        d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <h4 class="text-white mb-4">Quick Link</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                        <a class="btn btn-link" href="">Career</a>
+                        <h4 class="text-white mb-4">Useful Links</h4>
+                        <div class="d-flex flex-column ">
+                            <a class="btn btn-link text-light" href="#">Home</a>
+                            <a class="btn btn-link text-light" href="terms">Terms of service</a>
+                            <a class="btn btn-link text-light" href="privacy">Privacy policy</a>
+                            <a class="btn btn-link text-light" href="#about">About Us</a>
+                        </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <h4 class="text-white mb-4">Product</h4>
-                        <a class="btn btn-link" href="#">@Stafy Co. Ltd.</a>
-                        <a class="btn btn-link" href="https://www.forex-erp.com/index.html"
-                            target="_blank">@forex-erp.</a>
-                        <!-- <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                        <a class="btn btn-link" href="">Career</a> -->
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h4 class="text-white mb-4">Newsletter</h4>
-                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit
-                            non vulpu</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                                placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                    class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        <h4 class="text-white mb-4">Our Products</h4>
+                        <div class="d-flex flex-column">
+                            <a class="btn btn-link text-light" href="https://www.stafy.co.th/">HRM Solution</a>
+                            <a class="btn btn-link text-light" href="https://www.forex-erp.com/">Forex POS</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container px-lg-5">
+            <div class="container footer-bottom clearfix mt-4">
                 <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; ลิขสิทธิ์ @Stafy Co. Ltd.สงวนลิขสิทธิ์
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
+                    &copy; Copyright
+                    <strong>
+                        <span>Stafy Co. Ltd.</span>
+                    </strong> All Rights Reserved
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </footer>
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
+        <i class="bi bi-arrow-up text-white"></i>
+    </a>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    <!-- Contact -->
+    <div class="fixed-bottom mx-4 my-4 wow fadeInUp" data-wow-delay="0.1s" style="width: 50px; height: 50px;">
+        <!-- main button -->
+        <div class="rounded-circle floating-container">
+            <a class="bg-primary rounded-circle d-flex align-items-center justify-content-center shadow main-button"
+                style="width: 50px; height: 50px; text-decoration: none;">
+                <i class="bi bi-chat text-white" style="font-size: 24px;"></i>
+            </a>
+
+            <!-- hover -->
+            <div class="floating-menu">
+                <!-- Line Link -->
+                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=803ufcwl" target="_blank"
+                    class="bg-success rounded-circle d-flex align-items-center justify-content-center shadow sub-button"
+                    style="width: 40px; height: 40px; text-decoration: none; margin-bottom: 8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="Line Logo"
+                        style="width: 20px; height: 20px;">
+                </a>
+
+                <!-- Facebook Link -->
+                <a href="https://www.m.me/stafyth" target="_blank"
+                    class="bg-primary rounded-circle d-flex align-items-center justify-content-center shadow sub-button"
+                    style="width: 40px; height: 40px; text-decoration: none; margin-bottom: 8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook Logo" style="width: 20px; height: 20px;">
+                </a>
+
+                <!-- Chatbot -->
+                <button
+                    class="chat-toggle bg-warning rounded-circle d-flex align-items-center justify-content-center shadow sub-button"
+                    style="width: 40px; height: 40px; text-decoration: none; margin-bottom: 8px;">
+                    💬
+                </button>
+            </div>
+            <div class="chat-container" style="display: none;">
+                <div class="chat-header">
+                    Chat with Us
+                    <button class="chat-close">✖</button>
+                </div>
+
+                <div class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message..." id="userInput" disabled>
+                    <button id="sendMessage" disabled>Send</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- JavaScript Libraries -->

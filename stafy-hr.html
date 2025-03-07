@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <title>STAFY</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/stafy-logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        div.apexcharts-canvas *,
+        .apexcharts-text tspan {
+            font-family: 'Kanit' !important;
+        }
+
+        div.letter p {
+            margin: 0 !important;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+
+    <header id="header" class="fixed-top mt-0 pb-3">
+        <div class="container-fluid p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="#" class="navbar-brand p-0">
+                    <h1 class="m-1">HR</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a class="nav-item nav-link active" href="#">Home</a>
+    
+                        <a href="#about" class="nav-item nav-link">About</a>
+    
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" id="HrDropdown" data-bs-toggle="dropdown">
+                                HR
+                            </a>
+                            <ul class="dropdown-menu" id="HrDropdown">
+                                <li><a class="dropdown-item" href="#attendance">Attendance Schedule</a></li>
+                                <li><a class="dropdown-item" href="#leaves">Leaves</a></li>
+                                <li><a class="dropdown-item" href="#payroll">Payroll</a></li>
+                            </ul>
+                        </div>
+    
+                        <a class="nav-item nav-link" href="#pricing">Pricing</a>
+    
+                        <div class="nav-item dropdown">
+                            <a href="#features" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Other Features
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- เริ่ม Benefit Management -->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Benefit management
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">SSO Thailand</a></li>
+                                        <li><a class="dropdown-item" href="#">Your own</a></li>
+                                    </ul>
+                                </li>
+                                <!-- จบ Benefit Management -->
+                                <li><a class="dropdown-item" href="#">Staff claim</a></li>
+                                <li><a class="dropdown-item" href="#">Bank payroll payment</a></li>
+                                <li><a class="dropdown-item" href="#">Full Web API</a></li>
+                                <li><a class="dropdown-item" href="#">Reminders and notifications</a></li>
+                                <li><a class="dropdown-item" href="#">Disciplinary actions</a></li>
+                            </ul>
+                        </div>
+    
+                        <a class="nav-link scrollto" href="#contact">Contact</a>
+    
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                Languages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown">
+                                    <a class="dropdown-item" asp-action="SetCulture" asp-controller="Culture"
+                                        asp-route-culture="th-TH" asp-route-redirectUri="/">Thai</a>
+                                </li>
+    
+                                <li class="dropdown">
+                                    <a class="dropdown-item" asp-action="SetCulture" asp-controller="Culture"
+                                        asp-route-culture="en-US" asp-route-redirectUri="/">English</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="http://app.stafy.co.th/"
+                        class="btn btn-primary-gradient align-items-center justify-content-center py-2 px-4 ms-3 rounded-pill me-3 "
+                        style="font-size: 1.5rem; color: rgb(255, 255, 255);">
+                        Get Started
+                    </a>
+                </div>
+            </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+    <section class="d-flex align-items-center p-0" id="home">
+        <div class="container-fluid bg-white p-0">
+            <div class="container-fluid p-0">
+                <div class="container-fluid mx-0 pb-0 bg-primary hero-header">
+                    <div class="container px-lg-5">
+                        <div class="row g-5 align-items-center">
+                            <!-- Left Content -->
+                            <div class="col-lg-8 text-center text-lg-start text-white">
+                                <p class="text-white animated slideInDown"
+                                    style="font-size: 3.5rem; font-weight: bold;">
+                                    Better HR Solutions For Your Business
+                                </p>
+                                <p class="text-white pb-3 animated slideInDown"
+                                    style="font-size: 2rem; margin-bottom: 50px;">
+                                    We offer a complete HR solution for your business for FREE*
+                                </p>
+                                <a href="#contact"
+                                    class="btn btn-primary-gradient py-sm-3  rounded-pill me-3 animated slideInLeft"
+                                    style="font-size: 1.5rem; color: #fff; font-weight: bold;">
+                                    Get Started
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                                data-wow-delay="0.3s">
+                                <div class="owl-carousel screenshot-carousel">
+                                    <img class="img-fluid rounded shadow-sm" src="img/screenshot-1.png"
+                                        alt="Screenshot 1">
+                                    <img class="img-fluid rounded shadow-sm" src="img/screenshot-2.png"
+                                        alt="Screenshot 2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+        <!-- ======= About ======= -->
+        <section id="about" class="services section-bg bg-white">
+            <div class="container py-5 px-lg-5 " id="about">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">About</p>
+                        <p class="mb-4" style="font-size: 1.5rem;">#1 APP STAFY THE BEST HRM</p>
+                        <p> Tools that assist businesses in methodically managing their workforce. from hiring, keeping
+                            track of time, retrieving reports, and precisely preparing payroll. Assist HR in developing
+                            employees and increasing organizational efficiency.</p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="d-flex">
+                                    <i class="fa fa-building fa-2x text-primary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
+                                        <p class="text-primary-gradient mb-0">Organization</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="d-flex">
+                                    <i class="fa fa-users fa-2x text-secondary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
+                                        <p class="text-secondary-gradient mb-0">Client</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"
+                            style="font-size: 1.5rem; color: rgb(255, 255, 255); font-weight: bold;">Read
+                            More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Attendance Section ======= -->
+        <section id="attendance">
+            <div class="container-xxl py-5" id="feature">
+                <div class="container py-5 px-lg-5 ">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">
+                            Attendance & Schedules</p>
+                        <p class="mb-4" style="font-size: 1rem;">No more headache managing your employees
+                            attendance and their work schedules</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-xl-3 text-center col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="feature-item bg-light rounded p-4 d-flex flex-column h-100">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-user text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3" style="color: black; font-size: 1.5rem;">Facial
+                                    Recognition</p>
+                                <p class="m-0">Who need thumb print and punch card, use one in everyone's
+                                    pocket</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 text-center col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="feature-item bg-light rounded p-4 d-flex flex-column h-100">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-map text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3" style="color: black; font-size: 1.5rem;">Know their
+                                    location</p>
+                                <p class="m-0">Do you know when and where your employee is during work
+                                    hours, too bad, too much time is wasted in coffee shop</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 text-center col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="feature-item bg-light rounded p-4 d-flex flex-column h-100">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-file text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3" style="color: black; font-size: 1.5rem;">Shift Schedule
+                                </p>
+                                <p class="m-0">Create you shift schedule to every work place</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 text-center col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="feature-item bg-light rounded p-4 d-flex flex-column h-100">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-clock text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3" style="color: black; font-size: 1.5rem;">Track timesheet
+                                </p>
+                                <p class="m-0">See how much time your employees spent at work, taking break,
+                                    or just being late to work</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Services Section -->
+
+        <!-- ======= Leaves Section ======= -->
+        <section id="leaves">
+            <div class="container-xxl py-5" id="leaves">
+                <div class="container py-5 px-lg-5 ">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">Leaves
+                            Management</p>
+                        <p class="mb-4" style="font-size: 1rem;">Fully online self manage employee leave
+                            management</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-xl-4 text-start col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="leaves-item bg-light rounded p-4 d-flex flex-column h-100">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-bed text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3" style="color: black; font-size: 1.5rem;">Leave</p>
+                                <p class="m-0"><i class="fa fa-check text-primary-gradient me-3"></i>Sick
+                                    Leave For medical reason</p>
+                                <p class="m-0"><i class="fa fa-check text-primary-gradient me-3"></i>Annual
+                                    Leave Plan in advance</p>
+                                <p class="m-0"><i class="fa fa-check text-primary-gradient me-3"></i>Marital
+                                    Big day</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 text-start col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="leaves-item bg-light rounded p-4 d-flex flex-column h-100">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-user-check text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3" style="color: black; font-size: 1.5rem;">Eligbility</p>
+                                <p class="m-0"><i
+                                        class="fa fa-check text-primary-gradient me-3"></i>Emergency leave
+                                    When things happens</p>
+                                <p class="m-0"><i
+                                        class="fa fa-check text-primary-gradient me-3"></i>Compassionate
+                                    Time to grief</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 text-start col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="leaves-item bg-light rounded p-4 d-flex flex-column h-100">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-arrows-alt-h text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3" style="color: black; font-size: 1.5rem;">Carry forward</p>
+                                <p class="m-0"><i
+                                        class="fa fa-check text-primary-gradient me-3"></i>Maternity Welcome
+                                    a new person</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======= Payroll Section ======= -->
+        <section id="payroll" class="container-fluid py-5">
+            <div class="container py-5 px-lg-5">
+                <h1 class="text-primary-gradient ">Payroll</h1>
+                <div class="row g-5 ">
+                    <div class="col-lg-6">
+                        <p class="mb-4" style="font-size: 1.3rem; font-weight: bold;">If you run our a
+                            business that needs</p>
+
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Different wage
+                            schedules</p>
+
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Different pay
+                            day schedules</p>
+
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Various
+                            benefits as enacted by varios labour laws</p>
+
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Payroll on
+                            demand</p>
+
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Allowances,
+                            other incomes</p>
+
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Penalty and
+                            deductions</p>
+
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p class="mb-4" style="font-size: 1.3rem; font-weight: bold;">STAFY allows your
+                            business to manage</p>
+                        <a href="http://bit.ly/3Kytb9w"
+                            class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Learn
+                            More</a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Payroll Us Section -->
+        <section id="team" class="services section-bg">
+            <div class="container-xxl py-5" id="feature">
+                <div class="container py-5 px-lg-5 ">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">Earned
+                            wage access</p>
+                        <p class="mb-4" style="font-size: 1rem;">There are times when waiting for the next
+                            pay day is pain, may be your employee get into some kind of emergentcy, and they shouldn't
+                            be sent to pawnshop or loan sharks</p>
+                    </div>
+                    <div class="row gx-5 ">
+                        <div class="col-xl-3 text-center col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-user-check text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3 " style="color: black; font-size: 1.5rem;">Staff Retention
+                                </p>
+                                <p class="m-0">Keep your most valuable assets happy</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 text-center col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-file text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3 " style="color: black; font-size: 1.5rem;">Social
+                                    responsibility Schedule</p>
+                                <p class="m-0">Every now and then everyone have some emergency</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 text-center col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-cloud text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3 " style="color: black; font-size: 1.5rem;">No more complex
+                                    calculation</p>
+                                <p class="m-0"><strong>STAFY</strong> makes it very easy to help your
+                                    employees</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 text-center col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="feature-item bg-light rounded p-4">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-users text-white fs-4"></i>
+                                </div>
+                                <p class="mb-3 " style="color: black; font-size: 1.5rem;">Peers</p>
+                                <p class="m-0">It's not just employer, other colleagues can help too</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Team Section -->
+        <!--=======Pricing Section=======-->
+            <section id="pricing" class="pricing">
+                <div class="container-fluid py-5">
+                    <div class="container py-5 px-lg-5">
+                        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <p class="text-primary-gradient" style="font-size: 3rem; font-weight: bold;">
+                                Feature tables</p>
+                            <p> See whats <strong>STAFY</strong> has to offer,
+                                and compare that to our competitors.</p>
+                        </div>
+                        <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="tab-content text-start">
+                                <div id="tab-1" class="tab-pane fade show p-0 active">
+                                    <div class="row g-4 justify-content-center">
+                                        <div class="col-lg-4">
+                                            <div class="bg-light rounded border">
+                                                <div class="border-bottom p-4 mb-4">
+                                                    <p class="text-primary-gradient mb-1"
+                                                        style="font-size: 1rem; font-weight: bold;">Our
+                                                        competition</p>
+                                                    <h4 class="text-primary-gradient">Competitor
+                                                        A</h4>
+                                                    <span>RM 8.00 per employee per month</span>
+                                                </div>
+                                                <div class="p-4 pt-0">
+                                                    <ul>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Dashboard
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Account Closing
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Profit & Loss
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Cash Journal
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Purchase Invoice
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Sales Invoice
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Purchase Order
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Quotation
+                                                        </li>
+                                                    </ul>
+                                                    <a href="#contact"
+                                                        class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4">Get
+                                                        Started</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mt-4">
+                                            <div class="bg-light rounded border">
+                                                <div class="border-bottom p-4 mb-4">
+                                                    <p class="text-primary-gradient mb-1"
+                                                        style="font-size: 1rem; font-weight: bold;">The
+                                                        best</p>
+                                                    <h4 class="text-primary-gradient">$ HR
+                                                    </h4>
+                                                    <span>RM 0.00 per month</span>
+                                                </div>
+                                                <div class="p-4 pt-0">
+                                                    <ul>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Payroll
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Schedules
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Leaves
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Time sheet
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Performance
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Early wage acess
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-check text-primary-gradient pt-1"></i>
+                                                            Staff claims
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-times text-secondary pt-1"></i>
+                                                            <span>Talent management (coming)</span>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="#contact"
+                                                        class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4">Get
+                                                        Started</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Pricing Section -->
+
+            <!-- Start Features Section -->
+            <section id="features">
+                <div class="container-xxl py-5" id="feature">
+                    <div class="container py-5 px-lg-5 ">
+                        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">Features</p>
+                        </div>
+                        <div class="row g-4 ">
+                            <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="feature-item bg-light rounded p-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fa fa-money-bill-wave text-white fs-4"></i>
+                                    </div>
+                                    <p class="mb-3 " style="color: black; font-size: 1.5rem;">Salary</p>
+                                    <p class="m-0">Salary slip. Make a claim for costs </p>
+                                    <p class="m-0">Allowance, OT, and Welfare
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="feature-item bg-light rounded p-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fa fa-user-check text-white fs-4"></i>
+                                    </div>
+                                    <p class="mb-3 " style="color: black; font-size: 1.5rem;">System of Attendance </p>
+                                    <p class="m-0">Keep track of your working hours. </p>
+                                    <p class="m-0">Check in for work on the go. </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="feature-item bg-light rounded p-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fa fa-calendar-alt text-white fs-4"></i>
+                                    </div>
+                                    <p class="mb-3 " style="color: black; font-size: 1.5rem;"> Online Leave System</p>
+                                    <p class="m-0">Advance Leave System</p>
+                                    <p class="m-0">Verify your leave eligibility. </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="feature-item bg-light rounded p-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fa fa-table text-white fs-4"></i>
+                                    </div>
+                                    <p class="mb-3 " style="color: black; font-size: 1.5rem;">Work Schedule System</p>
+                                    <p class="m-0">Assign Work Schedule</p>
+                                    <p class="m-0">Check Work Schedule</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="feature-item bg-light rounded p-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fa fa-smile text-white fs-4"></i>
+                                    </div>
+                                    <p class="mb-3 " style="color: black; font-size: 1.5rem;">Face Scan</p>
+                                    <p class="m-0">Supports AI-based facial attendance</p>
+                                    <p class="m-0">GPS Positioning</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                                <div class="feature-item bg-light rounded p-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                        style="width: 60px; height: 60px;">
+                                        <i class="fa fa-shield-alt text-white fs-4"></i>
+                                    </div>
+                                    <p class="mb-3 " style="color: black; font-size: 1.5rem;">High Security</p>
+                                    <p class="m-0">Define access permissions from actual organization</p>
+                                    <p class="m-0">Data is stored on a secure server</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="container-fluid py-5">
+                    <div class="container py-5 px-lg-5">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-primary-gradient" style="font-size: 3rem; font-weight: bold;">Why Choose
+                                    Us?</p>
+                                <p class="mb-4" style="font-size: 1.3rem; font-weight: bold;">
+                                    Enterprise-grade quality with a complete and functional payroll system
+                                </p>
+                                <p class="mb-4">Our human resource management system, complete with automated payroll,
+                                    reduces HR
+                                    workload by accurately recording attendance and streamlining various HR tasks.
+                                    Employees can
+                                    easily apply for leave, and flexible settings allow for streamlined payroll
+                                    processing, all
+                                    within STAFY. The platform is user-friendly, requiring minimal learning time, and
+                                    provides a
+                                    variety of report formats.</p>
+                                <p><i class="fa fa-check text-primary-gradient me-3"></i>No need for an IT team or
+                                    server investment
+                                </p>
+                                <p><i class="fa fa-check text-primary-gradient me-3"></i>Supports AI and GPS-based
+                                    facial attendance
+                                </p>
+                                <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Accessible
+                                    anytime, anywhere
+                                </p>
+
+                                <a href="#contact"
+                                    class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read
+                                    More</a>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                                data-wow-delay="0.3s">
+                                <div class="owl-carousel screenshot-carousel">
+                                    <img class="img-fluid" src="img/screenshot-1.png" alt="">
+                                    <img class="img-fluid" src="img/screenshot-2.png" alt="">
+                                    <!-- <img class="img-fluid" src="img/screenshot-3.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-4.png" alt="">
+                            <img class="img-fluid" src="img/screenshot-5.png" alt=""> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-xxl py-5">
+                    <div class="container py-5 px-lg-5">
+                        <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+
+                            <p class="text-primary-gradient pb-3" style="font-size: 3rem; font-weight: bold;">
+                                Who Is It For?
+                            </p>
+                        </div>
+                        <div class="row gy-5 gx-4 justify-content-center">
+                            <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                        style="width: 100px; height: 100px;">
+                                        <i class="fa fa-laptop fa-3x text-white"></i>
+                                    </div>
+                                    <h5 class="mt-4 mb-3">Multi-Platform</h5>
+                                    <p class="mb-0">Supports work-hour settings for both office shifts and flexible
+                                        hours</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                        style="width: 100px; height: 100px;">
+                                        <i class="fa fa-building fa-3x text-white"></i>
+                                    </div>
+                                    <h5 class="mt-4 mb-3">Multi-Company</h5>
+                                    <p class="mb-0">Manage data for multiple companies within a single system, suitable
+                                        for all
+                                        business sizes</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                                    <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                        style="width: 100px; height: 100px;">
+                                        <i class="fa fa-users fa-3x text-white"></i>
+                                    </div>
+                                    <h5 class="mt-4 mb-3">Multi-Generation</h5>
+                                    <p class="mb-0">Designed for all generations, enabling employees to manage tasks
+                                        independently
+                                        in the system</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container-fluid py-5" id="review">
+                    <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <p class="text-primary-gradient pb-3" style="font-size: 3rem; font-weight: bold;">
+                            Video
+                        </p>
+                        <p class="text-black-gradient pb-3" style="font-size: 2rem; font-weight: bold;">
+                            How to
+                        </p>
+                    </div>
+                    <div class="container py-5 px-lg-5">
+                        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/QidCFRRFF4w?si=XwJuh-yJuSka85Iq"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/o7N4_R59Zj8?si=OqDJv3XB6Ff9QhXq"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/a2o-25wua_4?si=AYV7eUEGczw3xXW6"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/88TaKZbmwY4?si=aX-zd_0DM7t9pGhN"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/MTcN1rq77k8?si=nIEhZlcz2xIRV3iN"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/TBrj_l-RX1c?si=Gh8BZObEjU7TWOJ6"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/ACe7B8JXNNA?si=HyD00jPqqnyoS-ng"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/NWG8T50s7Vk?si=iWw0KWbtBz8pzZP3"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/krv2WoIrEoY?si=OqTydYLdNduuLEmE"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container-xxl py-5">
+                    <div class="container py-5 px-lg-5">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6">
+                                <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/about.png">
+                            </div>
+                            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <p class="text-primary-gradient " style="font-size: 3rem; font-weight: bold;">Install
+                                </p>
+                                <p class="mb-4" style="font-size: 3rem; font-weight: bold; color: black;">Install The
+                                    Latest
+                                    Version Of Our App</p>
+                                <p class="mb-4"></p>
+                                <div class="row g-4 align-items-center ">
+                                    <div class="col-sm-8  wow fadeIn " data-wow-delay="0.5s">
+                                        <a href=""
+                                            class="d-flex align-items-center justify-content-center bg-primary-gradient rounded-pill py-2 px-6">
+                                            <i class="fab fa-apple fa-3x px-2 text-white flex-shrink-0"></i>
+                                            <i class="fab fa-android fa-3x px-4 text-white flex-shrink-0"></i>
+                                            <div class="ms-6">
+                                                <p class="text-white mb-2" style="font-size: 1.5rem;">Install for</p>
+                                                <p class="text-white mb-2" style="font-size: 1.5rem;">IOS & Android</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial Start -->
+            <section class="section-bg bg-white pt-5">
+                <div class="container-fluid py-5" id="review">
+                    <div class="container py-5 px-lg-5">
+                        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <h5 class="text-primary-gradient fw-medium fs-1">Review</h5>
+                        </div>
+                        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <img class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                                        src="img/testimonial-1.png" style="width: 85px; height: 85px;">
+                                    <div class="ms-4">
+                                        <h5 class="mb-1">Yutthaphum Yakok</h5>
+                                        <p class="mb-1">Sales/Adam Mobile</p>
+                                        <div>
+                                            <small class="fa fa-star text-warning"></small>
+                                            <small class="fa fa-star text-warning"></small>
+                                            <small class="fa fa-star text-warning"></small>
+                                            <small class="fa fa-star text-warning"></small>
+                                            <small class="fa fa-star text-warning"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mb-0">การทำงานมันสะดวกและง่ายขึ้นครับ</p>
+                            </div>
+                            <div class="testimonial-item rounded p-4">
+                                <div class="d-flex align-items-center mb-4">
+                                    <img class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                                        src="img/testimonial-2.png" style="width: 85px; height: 85px;">
+                                    <div class="ms-4">
+                                        <h5 class="mb-1">Sudarat Da-oh</h5>
+                                        <p class="mb-1">Supervisor/Adam Mobile</p>
+                                        <div>
+                                            <small class="fa fa-star text-warning"></small>
+                                            <small class="fa fa-star text-warning"></small>
+                                            <small class="fa fa-star text-warning"></small>
+                                            <small class="fa fa-star text-warning"></small>
+                                            <small class="fa fa-star text-warning"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mb-0">หลังจากใช้งาน STAFY ทำให้ลดเวลาการทำงานได้เยอะมากค่ะ</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial End -->
+            <!-- ======= Frequently Asked Questions Section ======= -->
+            <section id="faq" class="faq section-bg">
+                <div class="container" data-aos="fade-up">
+                    <!-- Section Title -->
+                    <div class="text-center pb-4">
+                        <h2 class="text-primary-gradient fw-bold">Frequently Asked Questions</h2>
+                    </div>
+                    <!-- FAQ List -->
+                    <div class="faq-list">
+                        <ul class="list-unstyled">
+                            <!-- FAQ Item 1 -->
+                            <li class="mb-4 p-3 rounded" style=" box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                                <a data-bs-toggle="collapse"
+                                    class="d-flex align-items-center justify-content-between text-decoration-none text-dark"
+                                    data-bs-target="#faq-list-1">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa fa-question-circle fa-lg me-3 text-dark"></i>
+                                        <span class="fw-bold text-primary-gradient">Is it true it's FREE?</span>
+                                    </div>
+                                    <i class="fa fa-chevron-down icon-show text-secondary"></i>
+                                    <i class="fa fa-chevron-up icon-close text-secondary d-none"></i>
+                                </a>
+                                <div id="faq-list-1" class="collapse show mt-2" data-bs-parent=".faq-list">
+                                    <p class="ms-4 text-dark">
+                                        Yes, it is. However, while the software is free, additional costs for
+                                        third-party services
+                                        such as SMS, Google Maps, and your own devices are not covered.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- FAQ Item 2 -->
+                            <li class="mb-4 p-3 rounded" style=" box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                                <a data-bs-toggle="collapse"
+                                    class="d-flex align-items-center justify-content-between text-decoration-none text-dark"
+                                    data-bs-target="#faq-list-2">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa fa-question-circle fa-lg me-3 text-dark"></i>
+                                        <span class="fw-bold text-primary-gradient">Can I open more than 1
+                                            account?</span>
+                                    </div>
+                                    <i class="fa fa-chevron-down icon-show text-secondary"></i>
+                                    <i class="fa fa-chevron-up icon-close text-secondary d-none"></i>
+                                </a>
+                                <div id="faq-list-2" class="collapse mt-2" data-bs-parent=".faq-list">
+                                    <p class="ms-4 text-dark">
+                                        Sure, you can have multiple accounts. Inactive accounts will be deleted after 2
+                                        months, but
+                                        you can back up your data anytime.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- FAQ Item 3 -->
+                            <li class="mb-4 p-3 rounded" style=" box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+                                <a data-bs-toggle="collapse"
+                                    class="d-flex align-items-center justify-content-between text-decoration-none text-dark"
+                                    data-bs-target="#faq-list-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa fa-question-circle fa-lg me-3 text-dark"></i>
+                                        <span class="fw-bold text-primary-gradient">Do you have a mobile app?</span>
+                                    </div>
+                                    <i class="fa fa-chevron-down icon-show text-secondary"></i>
+                                    <i class="fa fa-chevron-up icon-close text-secondary d-none"></i>
+                                </a>
+                                <div id="faq-list-3" class="collapse mt-2" data-bs-parent=".faq-list">
+                                    <p class="ms-4 text-dark">
+                                        Our web is mobile-responsive, and a native mobile app is scheduled for release
+                                        in early
+                                        December 2021.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- End Frequently Asked Questions Section -->
+
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="contact">
+                <div class="container " data-aos="fade-up">
+                    <div class="section-title text-center">
+                        <h1 class="text-primary-gradient fw-medium">Contact Us if You Are Interested!</h1>
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="col-lg-5 d-flex align-items-stretch">
+                            <div class=" bg-primary-gradient p-3 rounded">
+                                <div class="address text-white">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <h4>Location:</h4>
+                                    <p>7 Phangmuang 2 Road, Sateng, Mueang, Yala 95000</p>
+                                </div>
+
+                                <div class="email text-white">
+                                    <i class="bi bi-envelope"></i>
+                                    <h4>Email:</h4>
+                                    <p>sales@stafy.co.th</p>
+                                </div>
+
+                                <div class="phone text-white">
+                                    <i class="bi bi-phone"></i>
+                                    <h4>Call:</h4>
+                                    <p>089 978 5890</p>
+                                </div>
+
+                                <!---->
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.847212336331!2d101.28331697445091!3d6.54097022296119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b37577548ca625%3A0xca9f8422e507d482!2zU1RBRlkgQ28uLCBMdGQuICjguKrguLPguJnguLHguIHguIfguLLguJnguYPguKvguI3guYgp!5e0!3m2!1sen!2sth!4v1699939667660!5m2!1sen!2sth"
+                                    width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="fullname"
+                                                placeholder=" Fullname">
+                                            <label for="name">Fullname</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder=" Contract Email">
+                                            <label for="email">Contract Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="company"
+                                                placeholder=" Company name">
+                                            <label for="company">Company name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="phone" placeholder="
+                                                Contract Number">
+                                            <label for="phone">Contract Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder=" Message"
+                                                id="message" style="height: 150px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary-gradient rounded-pill py-3 px-5"
+                                            type="submit">Register</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End Contact Section -->
+    </main><!-- End #main -->
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid bg-primary text-light footer wow fadeIn " data-wow-delay="0.1s">
+            <div class="container-fluid py-0 px-lg-3">
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Address</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>7 Phangmuang 2 Road, Sateng, Mueang, Yala 95000</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>089 978 5890</p>
+                        <p><i class="fa fa-envelope me-3"></i>sales@stafy.co.th</p>
+
+                        <h4 class="text-white">Our Social Networks</h4>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/stafyth"
+                                target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="http://bit.ly/3KuBvr5">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/stafy.th/"
+                                target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social mx-1" href="http://bit.ly/3KpCMzv">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-tiktok" viewBox="0 0 16 16">
+                                    <path
+                                        d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Useful Links</h4>
+                        <div class="d-flex flex-column ">
+                            <a class="btn btn-link text-light" href="#">Home</a>
+                            <a class="btn btn-link text-light" href="terms">Terms of service</a>
+                            <a class="btn btn-link text-light" href="privacy">Privacy policy</a>
+                            <a class="btn btn-link text-light" href="#about">About Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Our Products</h4>
+                        <div class="d-flex flex-column">
+                            <a class="btn btn-link text-light" href="https://www.stafy.co.th/">HRM Solution</a>
+                            <a class="btn btn-link text-light" href="https://www.forex-erp.com/">Forex POS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom clearfix mt-4">
+                <div class="copyright">
+                    &copy; Copyright
+                    <strong>
+                        <span>Stafy Co. Ltd.</span>
+                    </strong> All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2">
+        <i class="bi bi-arrow-up text-white"></i>
+    </a>
+
+    <!-- Contact -->
+    <div class="fixed-bottom mx-4 my-4 wow fadeInUp" data-wow-delay="0.1s" style="width: 50px; height: 50px;">
+        <!-- main button -->
+        <div class="rounded-circle floating-container">
+            <a class="bg-primary rounded-circle d-flex align-items-center justify-content-center shadow main-button"
+                style="width: 50px; height: 50px; text-decoration: none;">
+                <i class="bi bi-chat text-white" style="font-size: 24px;"></i>
+            </a>
+
+            <!-- hover -->
+            <div class="floating-menu">
+                <!-- Line Link -->
+                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=803ufcwl" target="_blank"
+                    class="bg-success rounded-circle d-flex align-items-center justify-content-center shadow sub-button"
+                    style="width: 40px; height: 40px; text-decoration: none; margin-bottom: 8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="Line Logo"
+                        style="width: 20px; height: 20px;">
+                </a>
+
+                <!-- Facebook Link -->
+                <a href="https://www.m.me/stafyth" target="_blank"
+                    class="bg-primary rounded-circle d-flex align-items-center justify-content-center shadow sub-button"
+                    style="width: 40px; height: 40px; text-decoration: none; margin-bottom: 8px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook Logo" style="width: 20px; height: 20px;">
+                </a>
+
+                <!-- Chatbot -->
+                <button
+                    class="chat-toggle bg-warning rounded-circle d-flex align-items-center justify-content-center shadow sub-button"
+                    style="width: 40px; height: 40px; text-decoration: none; margin-bottom: 8px;">
+                    💬
+                </button>
+            </div>
+            <div class="chat-container" style="display: none;">
+                <div class="chat-header">
+                    Chat with Us
+                    <button class="chat-close">✖</button>
+                </div>
+
+                <div class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message..." id="userInput" disabled>
+                    <button id="sendMessage" disabled>Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
